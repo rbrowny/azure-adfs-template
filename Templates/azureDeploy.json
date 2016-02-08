@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
   "contentVersion": "1.0.0.0",
   "parameters": {
@@ -29,7 +29,7 @@
         "South India",
         "West India"
       ],
-      "metadata": { "description": "The region to deploy the resources into" }
+      "metadata": { "description": "The region to deploy the resources into." }
     },
     "adminUsername": {
       "type": "string",
@@ -41,13 +41,13 @@
     "adminPassword": {
       "type": "securestring",
       "metadata": {
-        "description": "Password for the local administrator account. Cannot be \"P@ssw0rd\" and possibly other such common passwords. Must be 8 characters long and three of the following complexity requirements: uppercase, lowercase, number, special character"
+        "description": "Password for the local administrator account. Cannot be \"P@ssw0rd\" and possibly other such common passwords. Must be 8 characters long and meet three of the following complexity requirements: uppercase, lowercase, number, special character."
       }
     },
     "storageAccountName": {
       "type": "string",
       "defaultValue": "nromadfsstor",
-      "metadata": { "description": "The name of the storage account into which the VMs will be deployed" }
+      "metadata": { "description": "The name of the storage account into which the VMs will be deployed." }
     },
     "companyNamePrefix": {
       "type": "string",
@@ -57,36 +57,36 @@
     "addcVMNameSuffix": {
       "type": "string",
       "defaultValue": "DC",
-      "metadata": { "description": "The suffix of the DC: <COMPANYNAMEPREFIX> + -ADDCNAMESUFFIX + index" }
+      "metadata": { "description": "The suffix of the DC: <COMPANYNAMEPREFIX> + -ADDCNAMESUFFIX + index." }
     },
 
     "adfsVMNameSuffix": {
       "type": "string",
       "defaultValue": "adfs",
-      "metadata": { "description": "Suffix to use for ADFS VM name" }
+      "metadata": { "description": "Suffix to use for ADFS VM name." }
     },
     "wapVMNameSuffix": {
       "type": "string",
       "defaultValue": "proxy",
       "metadata": {
-        "description": "Suffix to use for WAP VM Name"
+        "description": "Suffix to use for WAP VM Name."
       }
     },
     "numberofVMInstances": {
       "type": "int",
       "defaultValue": 2,
-      "metadata": { "description": "The number of ADFS and WAP VMs to build" }
+      "metadata": { "description": "The number of ADFS and WAP VMs to build." }
     },
     "vmSize": {
       "type": "string",
       "defaultValue": "Standard_D1",
       "metadata": {
-        "description": "Select a VM SKU"
+        "description": "Select a VM SKU."
       }
     },
     "networkInterfaceName": {
       "type": "string",
-      "metadata": { "description": "This is the name of the Network interfaces." },
+      "metadata": { "description": "This is the name of the Network Interfaces." },
       "defaultValue": "NIC"
     },
     "adIPs": {
@@ -97,16 +97,16 @@
     "ilbIP": {
       "type": "string",
       "defaultValue": "10.0.2.10",
-      "metadata": { "description": "The IP used for the ADFS Load Balancer (Internal)" }
+      "metadata": { "description": "The IP used for the ADFS Load Balancer (Internal)." }
     },
     "onPremDNSIP": {
       "type": "string",
-      "metadata": { "description": "The address of a domain controller on-premises" },
+      "metadata": { "description": "The address of a Domain Controller on-premises." },
       "defaultValue": "192.168.32.10"
     },
     "localAddressPRefix": {
       "metadata": {
-        "description": "Address Prefix of the on-premises network"
+        "description": "Address Prefix of the on-premises network."
       },
       "defaultValue": [ "10.0.1.0/24", "10.0.2.0/24", "192.168.0.0/16" ],
       "type": "array"
@@ -114,13 +114,13 @@
     "localGatewayIPAddress": {
       "type": "string",
       "metadata": {
-        "description": "IP Address of the on-premises VPN Appliance"
+        "description": "IP Address of the on-premises VPN Appliance."
       }
     },
     "virtualNetworkAddressRange": {
       "type": "string",
       "metadata": {
-        "description": "The address range of the new virtual network in CIDR format"
+        "description": "The address range of the new virtual network in CIDR format."
       },
       "defaultValue": "10.0.0.0/16"
     },
@@ -133,7 +133,7 @@
       "type": "string",
       "defaultValue": "10.0.1.248/29",
       "metadata": {
-        "description": "Address space used by the VPN Gateway. It must be larger than a /29; it is recommended to keep it at /29 as you can't deploy into it"
+        "description": "Address space used by the VPN Gateway. It must be larger than a /29; it is recommended to keep it at /29 as you can't deploy into it."
       }
     },
     "adfsSubnetAddressRange": {
@@ -150,13 +150,13 @@
       "type": "string",
       "defaultValue": "On-Prem-VPN",
       "metadata": {
-        "description": "Arbitrary name for the gateway representing the on-premises network"
+        "description": "Arbitrary name for the gateway representing the on-premises network."
       }
     },
     "sharedKey": {
       "type": "string",
       "metadata": {
-        "description": "Arbitrary Shared key (PSK) for IPSec tunnel"
+        "description": "Arbitrary Shared key (PSK) for IPSec tunnel."
       },
       "defaultValue": "YouShouldGenerateANewKey"
     }
